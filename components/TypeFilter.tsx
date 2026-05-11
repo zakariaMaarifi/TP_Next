@@ -1,7 +1,7 @@
 "use client";
 
 import { PokemonType } from "@/lib/types";
-import { getTypeColor } from "@/lib/typeColors";
+import { getTypeBgColor } from "@/lib/typeColors";
 
 interface TypeFilterProps {
   types: PokemonType[];
@@ -28,7 +28,7 @@ export default function TypeFilter({ types, selected, onChange }: TypeFilterProp
             onClick={() => toggle(type.id)}
             className={`text-xs font-medium px-3 py-1 rounded-full border-2 transition-all ${
               active
-                ? `${getTypeColor(type.name)} border-transparent shadow-md scale-105`
+                ? `${getTypeBgColor(type.name)} text-blue-800 border-transparent shadow-md scale-105`
                 : "bg-blue-50 text-blue-800 border-blue-200 hover:border-blue-400"
             }`}
           >

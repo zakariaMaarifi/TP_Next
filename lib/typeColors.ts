@@ -22,3 +22,8 @@ export const TYPE_COLORS: Record<string, string> = {
 export function getTypeColor(typeName: string): string {
   return TYPE_COLORS[typeName] ?? "bg-gray-200 text-black";
 }
+
+export function getTypeBgColor(typeName: string): string {
+  const classes = TYPE_COLORS[typeName] ?? "bg-gray-200 text-black";
+  return classes.split(" ")[0]; // bg-xxx only
+}
